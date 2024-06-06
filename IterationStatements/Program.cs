@@ -1,4 +1,6 @@
-﻿namespace IterationStatements
+﻿using System.Runtime;
+
+namespace IterationStatements
 {
     public class Program
     {
@@ -27,7 +29,98 @@
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
-            
+            thousands();
+            threes();
+            isEqual(5, 6);
+            isEqual(6, 6);
+            isEven(5);
+            isEven(6);
+            isPositive(5);
+            isPositive(-6);
+            isPositive(0);
+            canVote(5);
+            canVote(39);
+            betweenTens(5);
+            betweenTens(-29);
+            multiplicationTable();
+
+        }
+
+        private static void thousands()
+        {
+            for (int i = -1000; i <= 1000; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private static void threes()
+        {
+            for (int i = 3; i <= 999; i += 3)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private static void isEqual(int num1, int num2)
+        {
+            if (num1 == num2)
+            {
+                Console.WriteLine("the two numbers are equal.");
+            }
+        }
+        private static void isEven(int num)
+        {
+            Console.WriteLine((num % 2 == 0) ? "the number is even" : "the number is odd");
+        }
+
+        private static void isPositive(int num)
+        {
+            if (num < 0)
+            {
+                Console.WriteLine("The number is negative");
+            } 
+            else if (num > 0) {
+                Console.WriteLine("The number is positive");
+            }
+            else
+            {
+                Console.WriteLine("The number is nonnegative");
+            }
+        }
+
+        private static void canVote(int num)
+        {
+            Console.WriteLine((num >= 18) ? $"a person age {num} can vote" : $"a person age {num} cannot vote");
+        }
+
+        private static void betweenTens(int num)
+        {
+            Console.WriteLine((num >= -10 && num <= 10) ? $"{num} is within the range [-10, 10]" : $"{num} is not within the range [-10, 10]");
+        }
+
+        private static void multiplicationTable()
+        {
+            for (int i = 1; i <= 12; i++)
+            {
+                for (int j = 1; j <= 12; j++)
+                {
+                    int numLength = (j * i).ToString().Length;
+                    switch (numLength)
+                    {
+                        case 1:
+                            Console.Write($"{j * i}   ");
+                            break;
+                        case 2:
+                            Console.Write($"{j * i}  ");
+                            break;
+                        case 3:
+                            Console.Write($"{j * i} ");
+                            break;
+                    }
+                }
+                Console.Write("\n");
+            }
         }
     }
 }
