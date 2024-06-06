@@ -29,24 +29,24 @@ namespace IterationStatements
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
-            thousands();
-            threes();
-            isEqual(5, 6);
-            isEqual(6, 6);
-            isEven(5);
-            isEven(6);
-            isPositive(5);
-            isPositive(-6);
-            isPositive(0);
-            canVote(5);
-            canVote(39);
-            betweenTens(5);
-            betweenTens(-29);
-            multiplicationTable();
+            Thousands();
+            Threes();
+            IsEqual(5, 6);
+            IsEqual(6, 6);
+            IsEven(5);
+            IsEven(6);
+            IsPositive(5);
+            IsPositive(-6);
+            IsPositive(0);
+            CanVote(5);
+            CanVote(39);
+            BetweenTens(5);
+            BetweenTens(-29);
+            MultiplicationTable();
 
         }
 
-        private static void thousands()
+        private static void Thousands()
         {
             for (int i = -1000; i <= 1000; i++)
             {
@@ -54,7 +54,7 @@ namespace IterationStatements
             }
         }
 
-        private static void threes()
+        private static void Threes()
         {
             for (int i = 3; i <= 999; i += 3)
             {
@@ -62,19 +62,19 @@ namespace IterationStatements
             }
         }
 
-        private static void isEqual(int num1, int num2)
+        private static void IsEqual(int num1, int num2)
         {
             if (num1 == num2)
             {
                 Console.WriteLine("the two numbers are equal.");
             }
         }
-        private static void isEven(int num)
+        private static void IsEven(int num)
         {
             Console.WriteLine((num % 2 == 0) ? "the number is even" : "the number is odd");
         }
 
-        private static void isPositive(int num)
+        private static void IsPositive(int num)
         {
             if (num < 0)
             {
@@ -89,17 +89,17 @@ namespace IterationStatements
             }
         }
 
-        private static void canVote(int num)
+        private static void CanVote(int num)
         {
             Console.WriteLine((num >= 18) ? $"a person age {num} can vote" : $"a person age {num} cannot vote");
         }
 
-        private static void betweenTens(int num)
+        private static void BetweenTens(int num)
         {
             Console.WriteLine((num >= -10 && num <= 10) ? $"{num} is within the range [-10, 10]" : $"{num} is not within the range [-10, 10]");
         }
 
-        private static void multiplicationTable()
+        private static void MultiplicationTable()
         {
             for (int i = 1; i <= 12; i++)
             {
